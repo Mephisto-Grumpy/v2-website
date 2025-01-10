@@ -10,7 +10,7 @@ export const ProfileSection: React.FC<{ profile: ProfileInterface }> = ({
   profile
 }) => {
   return (
-    <div className="relative flex w-full flex-col items-center space-y-6 overflow-hidden bg-gradient-to-br from-background to-background/80 backdrop-blur-sm">
+    <div className="sticky top-4 flex w-full flex-col items-center space-y-6 overflow-hidden bg-gradient-to-br from-background to-background/80 backdrop-blur-sm">
       <div className="relative">
         <div className="aspect-auto overflow-hidden rounded-xl ring-2 ring-primary/20">
           <Image
