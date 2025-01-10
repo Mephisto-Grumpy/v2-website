@@ -6,14 +6,14 @@ import { ProjectComponent } from '@/components/projects/project-component'
 import { SITE_TITLE, SITE_URL } from '@/config/sitemap'
 
 interface WorkDetailPageProps {
-  params: { project: string }
+  params: Promise<{ project: string }>
 }
 
 export async function generateMetadata(
   { params }: WorkDetailPageProps,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const slug = params.project
+  const { project: slug } = await params
   const project = await fetchProjectBySlug(slug)
 
   const previousOGImages = (await parent).openGraph?.images || []
@@ -59,7 +59,7 @@ export async function generateMetadata(
 }
 
 export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
-  const slug = params.project
+  const { project: slug } = await params
   const project = await fetchProjectBySlug(slug)
 
   if (!project) {
