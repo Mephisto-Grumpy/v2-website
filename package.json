@@ -25,7 +25,6 @@
     "@sanity/table": "^1.1.2",
     "@sanity/ui": "^2.8.8",
     "@sanity/vision": "3",
-    "@sentry/nextjs": "^8",
     "@splinetool/react-spline": "^4.0.0",
     "@tabler/icons-react": "^3.12.0",
     "@vercel/analytics": "^1.3.1",
@@ -66,7 +65,6 @@
     "typescript": "^5"
   },
   "trustedDependencies": [
-    "@sentry/cli",
     "@vercel/speed-insights"
   ]
 }
