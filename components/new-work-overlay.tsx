@@ -27,7 +27,7 @@ export const NewWorkOverlay = () => {
   return (
     <main className="group fixed bottom-6 right-10 z-30 overflow-hidden">
       <Link
-        href="https://www.framer.com/marketplace/template/epic/?via=westhill97"
+        href="https://www.pungrumpy.com"
         target="_blank"
         rel="noopener noreferrer"
         className="block size-40 overflow-hidden rounded-lg border border-border bg-background shadow-lg transition-all duration-300"
