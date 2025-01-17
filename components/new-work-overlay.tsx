@@ -26,7 +26,7 @@ const useImageRotation = (images: string[], interval: number) => {
     }, interval)
 
     return () => clearInterval(timer)
-  }, [images.length, interval])
+  }, [images.length, interval, currentImageIndex])
 
   return { currentImageIndex, previousImageIndex }
 }
@@ -51,7 +51,7 @@ export const NewWorkOverlay = () => {
               key={currentImageIndex}
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
-              exit={{ y: '-100%' }}
+              exit={{ y: '-100%', position: 'absolute' }}
               transition={{
                 duration: 1,
                 ease: 'easeInOut'
