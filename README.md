@@ -1,6 +1,34 @@
+<a href="https://www.pungrumpy.com" aria-label="PunGrumpy's Digital Realm" target="_blank" rel="noopener noreferrer">
+ <picture>
+   <img
+    alt="Gateway to PunGrumpy's digital universe - Website preview"
+    src="https://www.pungrumpy.com/screenshot/preview.png"
+    />
+ </picture>
+</a>
+
+# 🌐 Welcome to the Digital Nexus
+
+Step into my corner of the digital frontier at [https://www.pungrumpy.com](https://www.pungrumpy.com).
+
+> [!NOTE]
+> While the source code of this digital sanctuary remains private, consider this repository your blueprint for innovation. Feel free to explore, learn, and create your own digital realms. Need guidance? Open an issue or reach out through the digital ether.
+
+---
+
 <div align="center">
     <h1>PunGrumpy's Personal Website</h1>
-    <img alt="Preview" src="/public/preview.png">
+    <picture>
+        <source
+            srcset="/public/preview.png"
+            media="(prefers-color-scheme: dark)"
+        />
+        <source
+            srcset="/public/preview-light.png"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+        />
+        <img src="/public/preview.png" />
+    </picture>
     <a aria-label="Framework" href="https://nextjs.org">
         <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000" />
     </a>
