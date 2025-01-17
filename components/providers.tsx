@@ -5,7 +5,7 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { type ThemeProviderProps } from 'next-themes'
 import * as React from 'react'
 
-import Loading from '@/app/loading'
+import Loading from '@/app/(app)/loading'
 
 export function Providers({ children }: ThemeProviderProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(true)
