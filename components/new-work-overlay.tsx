@@ -13,16 +13,29 @@ const images = [
   'https://www.pungrumpy.com/screenshot/preview-iphone-2.png'
 ]
 
-export const NewWorkOverlay = () => {
+const useImageRotation = (images: string[], interval: number) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [previousImageIndex, setPreviousImageIndex] = useState(
+    images.length - 1
+  )
 
   useEffect(() => {
     const timer = setInterval(() => {
+      setPreviousImageIndex(currentImageIndex)
       setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length)
-    }, 3000)
+    }, interval)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [images.length, interval])
+
+  return { currentImageIndex, previousImageIndex }
+}
+
+export const NewWorkOverlay = () => {
+  const { currentImageIndex, previousImageIndex } = useImageRotation(
+    images,
+    3500
+  )
 
   return (
     <main className="group fixed bottom-6 right-10 z-30 overflow-hidden">
@@ -33,7 +46,7 @@ export const NewWorkOverlay = () => {
         className="block size-40 overflow-hidden rounded-lg border border-border bg-background shadow-lg transition-all duration-300"
       >
         <div className="relative size-full">
-          <AnimatePresence initial={false} mode="popLayout">
+          <AnimatePresence mode="popLayout">
             <motion.div
               key={currentImageIndex}
               initial={{ y: '100%' }}
@@ -50,6 +63,7 @@ export const NewWorkOverlay = () => {
                 alt={`Portfolio screenshot ${currentImageIndex + 1}`}
                 fill
                 sizes="160px"
+                priority
                 className={cn(
                   'size-full object-cover',
                   'transform transition-transform duration-300 group-hover:scale-105'
