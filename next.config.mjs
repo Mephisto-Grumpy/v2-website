@@ -17,6 +17,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'api.microlink.io'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.pungrumpy.com'
       }
     ]
   }

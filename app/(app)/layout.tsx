@@ -4,9 +4,9 @@ import { Footer } from '@/components/layout/footer'
 import { Grid } from '@/components/layout/grid'
 import { Header } from '@/components/layout/header'
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '@/config/sitemap'
-import { formatDateString } from '@/lib/utils'
 
 import { fetchProjects, fetchTakes } from './actions'
+import { NewWorkOverlay } from '@/components/new-work-overlay'
 
 export const viewport: Viewport = {
   themeColor: [
@@ -102,6 +102,7 @@ export default async function AppLayout({ children }: AppLayoutProps) {
 
   return (
     <div className="flex flex-row flex-wrap items-center justify-center gap-14 rounded-3xl p-14 text-start">
+      <NewWorkOverlay />
       <Grid />
       <Header totalProject={projects.length} totalTake={takes.length} />
       {children}
