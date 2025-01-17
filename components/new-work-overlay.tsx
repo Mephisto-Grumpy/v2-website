@@ -33,7 +33,7 @@ export const NewWorkOverlay = () => {
         className="block size-40 overflow-hidden rounded-lg border border-border bg-background shadow-lg transition-all duration-300"
       >
         <div className="relative size-full">
-          <AnimatePresence initial={false}>
+          <AnimatePresence initial={false} mode="popLayout">
             <motion.div
               key={currentImageIndex}
               initial={{ y: '100%' }}
