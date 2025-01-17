@@ -1,16 +1,16 @@
 <a href="https://www.pungrumpy.com" aria-label="PunGrumpy's Digital Realm" target="_blank" rel="noopener noreferrer">
  <picture>
     <source
-        srcset="https://www.pungrumpy.com/screenshot/preview.png"
+        srcset="/public/preview-new.png"
         media="(prefers-color-scheme: dark)"
     />
     <source
-        srcset="https://www.pungrumpy.com/screenshot/preview.png"
+        srcset="/public/preview-new.png"
         media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
     />
     <img
         alt="Gateway to PunGrumpy's digital universe - Website preview"
-        src="https://www.pungrumpy.com/screenshot/preview.png"
+        src="/public/preview-new.png"
     />
  </picture>
 </a>
