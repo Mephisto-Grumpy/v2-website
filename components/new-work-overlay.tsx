@@ -58,8 +58,8 @@ export const NewWorkOverlay = () => {
             </motion.div>
           </AnimatePresence>
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 to-background/30 p-2 backdrop-blur-sm">
-            <p className="text-center text-xs font-bold text-foreground">
-              NEW FREE PORTFOLIO
+            <p className="text-center text-sm font-bold uppercase text-foreground">
+              New portfolio
             </p>
           </div>
         </div>
