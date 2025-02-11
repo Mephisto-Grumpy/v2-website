@@ -5,7 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 
-import { Providers } from '@/components/providers'
+import { ThemeProvider } from '@/components/providers/theme'
 import { cn } from '@/lib/utils'
 
 interface RootLayoutProps {
@@ -22,11 +22,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
           GeistMono.variable
         )}
       >
-        <Providers>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           <div className="bg-background">{children}</div>
           <Analytics />
           <SpeedInsights />
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   )
