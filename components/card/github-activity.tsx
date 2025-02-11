@@ -38,7 +38,7 @@ export const GitHubActivity = async () => {
       ))}
       <div className="absolute bottom-0 left-0 right-0 z-10 h-full bg-gradient-to-b from-transparent to-background sm:bottom-8 sm:h-40" />
       <a
-        className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap font-mono text-xs text-muted-foreground"
+        className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap font-mono text-muted-foreground"
         href="https://github.com/PunGrumpy"
         target="_blank"
         rel="noopener noreferrer"
