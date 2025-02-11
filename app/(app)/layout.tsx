@@ -98,7 +98,8 @@ interface AppLayoutProps {
 }
 
 export default async function AppLayout({ children }: AppLayoutProps) {
-  const [projects, takes] = await Promise.all([fetchProjects(), fetchTakes()])
+  const projects = await fetchProjects()
+  const takes = await fetchTakes()
 
   return (
     <div className="flex flex-row flex-wrap items-center justify-center gap-14 rounded-3xl p-14 text-start">
