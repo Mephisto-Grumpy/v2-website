@@ -3,10 +3,10 @@ import type { Metadata, Viewport } from 'next'
 import { Footer } from '@/components/layout/footer'
 import { Grid } from '@/components/layout/grid'
 import { Header } from '@/components/layout/header'
+import { NewWorkOverlay } from '@/components/new-work-overlay'
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '@/config/sitemap'
 
 import { fetchProjects, fetchTakes } from './actions'
-import { NewWorkOverlay } from '@/components/new-work-overlay'
 
 export const viewport: Viewport = {
   themeColor: [

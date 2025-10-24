@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect,useState } from 'react'
+
 import { cn } from '@/lib/utils'
-import { AnimatePresence, motion } from 'framer-motion'
 
 const images = [
   'https://www.pungrumpy.com/screenshot/preview.png',

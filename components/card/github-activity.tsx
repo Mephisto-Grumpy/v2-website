@@ -1,6 +1,7 @@
+import ActivityCalendar from 'rsc-activity-calendar'
+
 import { GitHubProperties } from '@/app/api/github/route'
 import { redis } from '@/lib/redis'
-import ActivityCalendar from 'rsc-activity-calendar'
 
 export const GitHubActivity = async () => {
   const github: GitHubProperties | null = await redis.get('github')

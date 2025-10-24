@@ -1,6 +1,7 @@
-import { redis } from '@/lib/redis'
 import { endOfWeek, subDays, subWeeks } from 'date-fns'
 import type { Activity } from 'rsc-activity-calendar'
+
+import { redis } from '@/lib/redis'
 
 export type GitHubProperties = {
   total: number
